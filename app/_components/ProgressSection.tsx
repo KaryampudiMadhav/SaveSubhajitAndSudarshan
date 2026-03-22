@@ -31,11 +31,10 @@ export default function ProgressSection({
     <section className="w-full bg-white flex flex-col md:flex-row">
       <div className="flex-1 relative w-full h-[60vh] md:h-auto min-h-[400px] bg-gray-50 flex items-center justify-center">
         {imageUrl && (
-          <Image 
+          <img 
             src={imageUrl} 
             alt="Progress Section Image" 
-            fill 
-            className="object-cover"
+            className="absolute inset-0 w-full h-full object-cover"
           />
         )}
       </div>

@@ -34,11 +34,10 @@ export default function StorySection({ imageUrl }: StorySectionProps) {
       </div>
       <div className="flex-1 relative w-full h-[60vh] md:h-auto min-h-[500px] flex items-center justify-center">
         {imageUrl && (
-          <Image 
+          <img 
             src={imageUrl} 
             alt="Story Section Image" 
-            fill 
-            className="object-cover"
+            className="absolute inset-0 w-full h-full object-cover"
           />
         )}
       </div>
