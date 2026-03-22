@@ -24,9 +24,9 @@ export default function Navbar() {
         <Link href="/donate" className="hover:text-purple-200 transition-colors">Donate</Link>
         <Link href="/medical-info" className="hover:text-purple-200 transition-colors">Medical Info</Link>
         <Link href="/about" className="hover:text-purple-200 transition-colors">About the family</Link>
-        <Link href="/contact" className="hover:text-purple-200 transition-colors">Contact</Link>
         <Link href="/csr" className="hover:text-purple-200 transition-colors">CSR</Link>
         <Link href="/benevity" className="hover:text-purple-200 transition-colors">Benevity</Link>
+        <Link href="/contact" className="hover:text-purple-200 transition-colors">Contact</Link>
       </div>
       
       {/* Spacer to keep links perfectly centered */}

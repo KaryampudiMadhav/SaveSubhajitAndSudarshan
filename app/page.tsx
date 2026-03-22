@@ -26,12 +26,12 @@ export const metadata: Metadata = {
 export default async function Home() {
   const campaign = await client.fetch('*[_type == "campaign"][0]');
   
-  const mainImageSrc = campaign?.mainImage ? urlForImage(campaign.mainImage).url() : undefined;
-  const secondaryImageSrc = campaign?.secondaryImage ? urlForImage(campaign.secondaryImage).url() : undefined;
-  const progressImageUrl = campaign?.progressImage ? urlForImage(campaign.progressImage).url() : undefined;
-  const storyImageUrl = campaign?.storyImage ? urlForImage(campaign.storyImage).url() : undefined;
-  const contributionsImageUrl1 = campaign?.contributionsImage1 ? urlForImage(campaign.contributionsImage1).url() : undefined;
-  const contributionsImageUrl2 = campaign?.contributionsImage2 ? urlForImage(campaign.contributionsImage2).url() : undefined;
+  const mainImageSrc = campaign?.mainImage ? urlForImage(campaign.mainImage).width(1200).url() : undefined;
+  const secondaryImageSrc = campaign?.secondaryImage ? urlForImage(campaign.secondaryImage).width(1200).url() : undefined;
+  const progressImageUrl = campaign?.progressImage ? urlForImage(campaign.progressImage).width(800).url() : undefined;
+  const storyImageUrl = campaign?.storyImage ? urlForImage(campaign.storyImage).width(1000).url() : undefined;
+  const contributionsImageUrl1 = campaign?.contributionsImage1 ? urlForImage(campaign.contributionsImage1).width(800).url() : undefined;
+  const contributionsImageUrl2 = campaign?.contributionsImage2 ? urlForImage(campaign.contributionsImage2).width(800).url() : undefined;
   const videoUrl1 = campaign?.appealVideoUrl || undefined;
   const videoUrl2 = campaign?.secondVideoUrl || undefined;
 
