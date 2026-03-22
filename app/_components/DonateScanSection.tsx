@@ -1,6 +1,14 @@
 import Image from "next/image";
+import { client } from "../../sanity/lib/client";
+import { urlForImage } from "../../sanity/lib/image";
 
-export default function DonateScanSection() {
+export default async function DonateScanSection() {
+  const campaign = await client.fetch('*[_type == "campaign"][0]', {}, { next: { revalidate: 10 } });
+  const qrCodeImageUrl = campaign?.qrCodeImage ? urlForImage(campaign.qrCodeImage).url() : undefined;
+
+  // Use Sanity QR Code, or fallback to the static generated one if empty
+  const qrImageSrc = qrCodeImageUrl || "https://api.qrserver.com/v1/create-qr-code/?size=250x250&data=upi://pay?pa=supportsubhaj4@yesbank&pn=Donation";
+
   return (
     <section className="w-full bg-white flex justify-center py-16 px-4">
       <div className="bg-[#f8f9fe] border border-gray-100 rounded-[2rem] p-12 w-full max-w-5xl flex flex-col md:flex-row items-center justify-between shadow-sm">
@@ -24,10 +32,9 @@ export default function DonateScanSection() {
 
         <div className="mt-12 md:mt-0 flex-shrink-0 bg-[#f1f3fd] p-8 rounded-[2rem] flex flex-col items-center">
           <div className="bg-white p-4 rounded-xl shadow-sm mb-4">
-            {/* Generate a mock QR code image source using an API or a placeholder */}
             <div className="w-48 h-48 relative">
               <Image 
-                src="https://api.qrserver.com/v1/create-qr-code/?size=250x250&data=upi://pay?pa=supportsubhaj4@yesbank&pn=Donation" 
+                src={qrImageSrc} 
                 alt="Donation QR Code" 
                 fill
                 className="object-contain"

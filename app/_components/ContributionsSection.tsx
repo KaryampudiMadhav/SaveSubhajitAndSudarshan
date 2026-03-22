@@ -1,6 +1,11 @@
 import Image from "next/image";
 
-export default function ContributionsSection() {
+interface ContributionsSectionProps {
+  imageUrl1?: string;
+  imageUrl2?: string;
+}
+
+export default function ContributionsSection({ imageUrl1, imageUrl2 }: ContributionsSectionProps) {
   const contributions = [
     "Specialized medical treatment",
     "Long-term care",
@@ -29,24 +34,27 @@ export default function ContributionsSection() {
         </ul>
       </div>
 
-      <div className="flex-1 flex h-[50vh] md:h-auto min-h-[400px]">
-        {/* Collage of two images side by side */}
-        <div className="relative w-1/2 h-full border-r-[6px] border-[#e2e5fb]">
-          <Image 
-            src="https://images.unsplash.com/photo-1519689680058-324335c77eba?auto=format&fit=crop&q=80&w=600" 
-            alt="Subhajit (13)" 
-            fill 
-            className="object-cover"
-          />
-        </div>
-        <div className="relative w-1/2 h-full border-l-[6px] border-[#e2e5fb]">
-          <Image 
-            src="https://images.unsplash.com/photo-1543332164-6e82f355badc?auto=format&fit=crop&q=80&w=600" 
-            alt="Sudarshan (1)" 
-            fill 
-            className="object-cover"
-          />
-        </div>
+      <div className="flex-1 flex flex-col md:flex-row h-[50vh] md:h-[60vh] min-h-[400px]">
+        {imageUrl1 && (
+          <div className="relative w-full md:w-1/2 h-1/2 md:h-full border-b-[6px] md:border-b-0 md:border-r-[6px] border-[#e2e5fb]">
+            <Image 
+              src={imageUrl1} 
+              alt="Contribution Impact 1" 
+              fill 
+              className="object-cover"
+            />
+          </div>
+        )}
+        {imageUrl2 && (
+          <div className="relative w-full md:w-1/2 h-1/2 md:h-full border-t-[6px] md:border-t-0 md:border-l-[6px] border-[#e2e5fb]">
+            <Image 
+              src={imageUrl2} 
+              alt="Contribution Impact 2" 
+              fill 
+              className="object-cover"
+            />
+          </div>
+        )}
       </div>
     </section>
   );

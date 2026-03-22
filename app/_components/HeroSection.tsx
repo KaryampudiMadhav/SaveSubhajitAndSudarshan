@@ -1,6 +1,11 @@
 import Image from "next/image";
 
-export default function HeroSection() {
+interface HeroSectionProps {
+  mainImageSrc?: string;
+  secondaryImageSrc?: string;
+}
+
+export default function HeroSection({ mainImageSrc, secondaryImageSrc }: HeroSectionProps) {
   return (
     <section className="flex flex-col md:flex-row w-full min-h-[85vh]">
       {/* Left Content Area */}
@@ -28,25 +33,29 @@ export default function HeroSection() {
       </div>
 
       {/* Right Image Stack */}
-      <div className="flex-1 flex flex-col">
-        <div className="relative w-full h-[50vh] min-h-[300px]">
-          <Image 
-            src="https://images.unsplash.com/photo-1543332164-6e82f355badc?auto=format&fit=crop&q=80&w=1000" 
-            alt="Sudarshan (1)" 
-            fill 
-            className="object-cover"
-            priority
-          />
-        </div>
-        <div className="relative w-full h-[50vh] min-h-[300px]">
-          <Image 
-            src="https://images.unsplash.com/photo-1519689680058-324335c77eba?auto=format&fit=crop&q=80&w=1000" 
-            alt="Subhajit (13)" 
-            fill 
-            className="object-cover"
-            priority
-          />
-        </div>
+      <div className="flex-1 flex flex-col gap-6 p-6 md:p-12 justify-center">
+        {mainImageSrc && (
+          <div className="relative w-full aspect-[4/3] max-h-[400px] rounded-3xl overflow-hidden shadow-2xl border-4 border-white bg-gray-100">
+            <Image 
+              src={mainImageSrc} 
+              alt="Hero Image 1" 
+              fill 
+              className="object-cover"
+              priority
+            />
+          </div>
+        )}
+        {secondaryImageSrc && (
+          <div className="relative w-full aspect-[4/3] max-h-[400px] rounded-3xl overflow-hidden shadow-2xl border-4 border-white md:ml-12 bg-gray-100">
+            <Image 
+              src={secondaryImageSrc} 
+              alt="Hero Image 2" 
+              fill 
+              className="object-cover"
+              priority
+            />
+          </div>
+        )}
       </div>
     </section>
   );

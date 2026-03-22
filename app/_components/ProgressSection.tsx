@@ -1,17 +1,43 @@
 import { ArrowRight } from "lucide-react";
 import Image from "next/image";
 
-export default function ProgressSection() {
+interface ProgressSectionProps {
+  amountRequired?: number | null;
+  amountRaised?: number | null;
+  supportersCount?: number | null;
+  imageUrl?: string;
+}
+
+export default function ProgressSection({
+  amountRequired,
+  amountRaised,
+  supportersCount,
+  imageUrl,
+}: ProgressSectionProps) {
+  // Format numbers nicely with commas according to Indian Number System
+  const formatINR = (amount: number) => {
+    return new Intl.NumberFormat('en-IN', {
+      style: 'currency',
+      currency: 'INR',
+      maximumFractionDigits: 0,
+    }).format(amount);
+  };
+
+  const formattedRequired = amountRequired ? formatINR(amountRequired) : "₹2,67,70,000";
+  const formattedRaised = amountRaised ? formatINR(amountRaised) : "₹1,65,879";
+  const formattedSupporters = supportersCount || 136;
+
   return (
     <section className="w-full bg-white flex flex-col md:flex-row">
-      <div className="flex-1 relative w-full h-[60vh] md:h-auto min-h-[400px]">
-        {/* We use an image here. From the design, it shows a baby image on the left. */}
-        <Image 
-          src="https://images.unsplash.com/photo-1543332164-6e82f355badc?auto=format&fit=crop&q=80&w=1000" 
-          alt="Sudarshan (1)" 
-          fill 
-          className="object-cover"
-        />
+      <div className="flex-1 relative w-full h-[60vh] md:h-auto min-h-[400px] bg-gray-50 flex items-center justify-center">
+        {imageUrl && (
+          <Image 
+            src={imageUrl} 
+            alt="Progress Section Image" 
+            fill 
+            className="object-cover"
+          />
+        )}
       </div>
       <div className="flex-1 flex flex-col justify-center px-12 md:px-20 py-16">
         <h2 className="font-outfit font-bold text-3xl lg:text-4xl text-black mb-10 tracking-wide uppercase">
@@ -20,13 +46,13 @@ export default function ProgressSection() {
         
         <div className="space-y-4 font-inter text-2xl lg:text-3xl">
           <p className="text-gray-700">
-            Required: <span className="text-[#10b981] font-bold">₹2,67,70,000</span>
+            Required: <span className="text-[#10b981] font-bold">{formattedRequired}</span>
           </p>
           <p className="text-gray-700">
-            Raised: <span className="text-[#ef4444] font-bold">₹1,65,879</span>
+            Raised: <span className="text-[#ef4444] font-bold">{formattedRaised}</span>
           </p>
           <p className="text-gray-700">
-            Supporters: <span className="text-[#5e6bd4] font-bold">136</span>
+            Supporters: <span className="text-[#5e6bd4] font-bold">{formattedSupporters}</span>
           </p>
         </div>
 

@@ -1,7 +1,11 @@
 import { ArrowRight } from "lucide-react";
 import Image from "next/image";
 
-export default function StorySection() {
+interface StorySectionProps {
+  imageUrl?: string;
+}
+
+export default function StorySection({ imageUrl }: StorySectionProps) {
   return (
     <section className="w-full flex flex-col md:flex-row bg-[#e2e5fb]">
       <div className="flex-1 flex flex-col justify-center px-12 md:px-20 py-16">
@@ -28,14 +32,15 @@ export default function StorySection() {
           <ArrowRight className="w-8 h-8 text-black" />
         </div>
       </div>
-      <div className="flex-1 relative w-full h-[60vh] md:h-auto min-h-[500px]">
-        {/* Image of the older boy on the right */}
-        <Image 
-          src="https://images.unsplash.com/photo-1519689680058-324335c77eba?auto=format&fit=crop&q=80&w=1000" 
-          alt="Subhajit (13)" 
-          fill 
-          className="object-cover"
-        />
+      <div className="flex-1 relative w-full h-[60vh] md:h-auto min-h-[500px] flex items-center justify-center">
+        {imageUrl && (
+          <Image 
+            src={imageUrl} 
+            alt="Story Section Image" 
+            fill 
+            className="object-cover"
+          />
+        )}
       </div>
     </section>
   );

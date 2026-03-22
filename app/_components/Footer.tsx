@@ -9,9 +9,9 @@ export default function Footer() {
             <Image 
               src="/donation_logo.png" 
               alt="Donate Logo" 
-              width={350} 
-              height={100} 
-              className="h-20 md:h-24 w-auto object-contain" 
+              width={400} 
+              height={150} 
+              className="h-[100px] md:h-[130px] w-auto object-contain scale-110 origin-left" 
             />
           </div>          <p className="font-inter text-2xl text-white">
             Make a <span className="text-[#fde047] font-bold">Big</span> difference by <span className="text-[#fde047] font-bold">Small</span> Efforts
@@ -21,21 +21,23 @@ export default function Footer() {
         <div className="flex flex-col md:flex-row gap-12 lg:gap-24 font-inter text-white">
           <div className="flex flex-col space-y-4">
             <h3 className="font-bold text-lg mb-2">Fundraising Platform</h3>
-            <a href="#" className="opacity-70 hover:opacity-100 transition-opacity">Impact Guru</a>
+            <a href="https://www.impactguru.com/fundraiser/help-subhajit-and-sudarshan" className="opacity-70 hover:opacity-100 transition-opacity">Impact Guru</a>
+            <a href="/csr" className="opacity-70 hover:opacity-100 transition-opacity">CSR Initiatives</a>
+            <a href="/benevity" className="opacity-70 hover:opacity-100 transition-opacity">Benevity Corporate</a>
           </div>
 
           <div className="flex flex-col space-y-4">
-            <h3 className="font-bold text-lg mb-2">Social Links</h3>
-            <a href="#" className="opacity-70 hover:opacity-100 transition-opacity">X</a>
-            <a href="#" className="opacity-70 hover:opacity-100 transition-opacity">Instagram</a>
-            <a href="#" className="opacity-70 hover:opacity-100 transition-opacity">Facebook</a>
-            <a href="#" className="opacity-70 hover:opacity-100 transition-opacity">Whatsapp</a>
+            <h3 className="font-bold text-lg mb-2">Explore Links</h3>
+            <a href="/about" className="opacity-70 hover:opacity-100 transition-opacity">About Family</a>
+            <a href="/medical-info" className="opacity-70 hover:opacity-100 transition-opacity">Medical Documents</a>
+            <a href="/donate" className="opacity-70 hover:opacity-100 transition-opacity">Donate Now</a>
+            <a href="/contact" className="opacity-70 hover:opacity-100 transition-opacity">Contact Us</a>
           </div>
 
           <div className="flex flex-col space-y-4">
             <h3 className="font-bold text-lg mb-2">Contact</h3>
-            <p className="opacity-70">+1234 567890</p>
-            <p className="opacity-70">xyz@gmail.com</p>
+            <p className="opacity-70">93332560570</p>
+            <p className="opacity-70">chakrabortypinki174@gmail.com</p>
             <div className="mt-4">
               <p className="mb-2">Your Message:</p>
               <textarea 
