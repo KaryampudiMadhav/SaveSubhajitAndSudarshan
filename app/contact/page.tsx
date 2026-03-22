@@ -6,6 +6,16 @@ export const metadata: Metadata = {
   title: 'Contact Us | Save Subhajit & Sudarshan',
   description: 'Get in touch with the Chakraborty family. Find our phone number, email address, and social media links here to offer support or verify details.',
   keywords: 'Contact Pinky Chakraborty, Phone Number, Email, Social Media, Charity Contact',
+  openGraph: {
+    title: 'Contact Us | Save Subhajit & Sudarshan',
+    description: 'Get in touch with the Chakraborty family to offer support or verify details.',
+    type: 'website',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Contact the Chakraborty Family',
+    description: 'Get in touch with the Chakraborty family to offer support or verify details.',
+  }
 };
 
 export default function ContactPage() {

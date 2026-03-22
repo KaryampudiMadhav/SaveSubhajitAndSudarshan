@@ -15,10 +15,25 @@ const outfit = Outfit({
 });
 
 export const metadata: Metadata = {
-  title: "Donation Campaign",
-  description: "Support our fundraising campaign for life-saving treatment.",
+  title: "Save Subhajit & Sudarshan | Donation Campaign",
+  description: "Support our urgent fundraising campaign for Subhajit and Sudarshan to provide life-saving treatment for Lesch-Nyhan Syndrome.",
   icons: {
     icon: "/donation_logo.png",
+  },
+  verification: {
+    google: 'qLD7NzXsW8dFXqCHy8WeQE_pO9ECwOEHxjVLbp_OOaU',
+  },
+  openGraph: {
+    title: "Save Subhajit & Sudarshan | Donation Campaign",
+    description: "Support our urgent fundraising campaign to provide life-saving treatment for Lesch-Nyhan Syndrome.",
+    type: "website",
+    locale: "en_IN",
+    siteName: "Care Guru Foundation",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Save Subhajit & Sudarshan | Donation Campaign",
+    description: "Support our urgent fundraising campaign for Subhajit and Sudarshan.",
   },
 };
 

@@ -17,9 +17,14 @@ export const metadata: Metadata = {
   description: 'Join our urgent campaign to save Subhajit (13) and Sudarshan (1) from Lesch-Nyhan Syndrome. Every small effort makes a big difference in their fight!',
   keywords: 'Donation, Healthcare, Lesch-Nyhan Syndrome, Charity, Save Children, Medical Fundraiser, India',
   openGraph: {
-    title: 'Help Save Subhajit & Sudarshan | Donation Campaign',
-    description: 'Join our urgent campaign to save two brothers from a rare genetic disease.',
+    title: 'Help Save Subhajit & Sudarshan | Urgent Medical Fundraiser',
+    description: 'Join our urgent campaign to save two brothers from Lesch-Nyhan Syndrome. Your donation can save lives.',
     type: 'website',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Help Save Subhajit & Sudarshan',
+    description: 'Join our urgent campaign to save two brothers from Lesch-Nyhan Syndrome. Your donation can save lives.',
   }
 };
 

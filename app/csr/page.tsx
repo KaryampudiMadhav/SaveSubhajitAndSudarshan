@@ -5,6 +5,16 @@ export const metadata: Metadata = {
   title: 'CSR Partnerships | Care Guru Foundation',
   description: 'Partner with Care Guru Foundation through Corporate Social Responsibility (CSR). Support life-saving medical treatments for children with rare diseases.',
   keywords: 'CSR India, Corporate Social Responsibility, NGO Partnership, Medical CSR, Corporate Donation, Care Guru Foundation',
+  openGraph: {
+    title: 'CSR Partnerships | Care Guru Foundation',
+    description: 'Partner with Care Guru Foundation through Corporate Social Responsibility (CSR).',
+    type: 'website',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'CSR Partnerships | Care Guru Foundation',
+    description: 'Partner with Care Guru Foundation through Corporate Social Responsibility (CSR).',
+  }
 };
 
 export default function CSRPage() {

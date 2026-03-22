@@ -5,6 +5,16 @@ export const metadata: Metadata = {
   title: 'Donate Now | Help Save Subhajit and Sudarshan',
   description: 'Make a donation today to help save two young brothers from Lesch-Nyhan Syndrome. You can donate via Impact Guru or scan our secure UPI QR code.',
   keywords: 'Donate, UPI Donation, Impact Guru Campaign, Save Subhajit, Medical Fundraiser, Lesch-Nyhan',
+  openGraph: {
+    title: 'Donate Now | Help Save Subhajit and Sudarshan',
+    description: 'Make a donation today to help save two young brothers from Lesch-Nyhan Syndrome.',
+    type: 'website',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Donate Now to Save Subhajit',
+    description: 'Make a donation today to help save two young brothers from Lesch-Nyhan Syndrome.',
+  }
 };
 
 export default function DonatePage() {

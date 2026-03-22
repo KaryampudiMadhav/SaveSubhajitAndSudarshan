@@ -5,6 +5,16 @@ export const metadata: Metadata = {
   title: 'Donate via Benevity | Workplace Giving',
   description: 'Employees of multinational companies can support our medical campaigns safely through the official Benevity corporate giving platform. Find the links here.',
   keywords: 'Benevity Donation, Corporate Giving, Workplace Giving Program, Employee Donation Match',
+  openGraph: {
+    title: 'Donate via Benevity | Workplace Giving',
+    description: 'Employees of multinational companies can support our medical campaigns safely through the official Benevity platform.',
+    type: 'website',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Donate via Benevity',
+    description: 'Employees of multinational companies can support our medical campaigns safely through Benevity.',
+  }
 };
 
 export default function BenevityPage() {

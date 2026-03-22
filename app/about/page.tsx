@@ -7,6 +7,16 @@ export const metadata: Metadata = {
   title: 'About the Family | Save Subhajit & Sudarshan',
   description: 'Learn the heartbreaking story of Subhajit and Sudarshan, two young brothers battling Lesch-Nyhan Syndrome, and how you can help them survive.',
   keywords: 'Lesch-Nyhan Syndrome, Medical Fundraising, Save Subhajit, Save Sudarshan, Family Story',
+  openGraph: {
+    title: 'About the Family | Save Subhajit & Sudarshan',
+    description: 'Learn the heartbreaking story of Subhajit and Sudarshan, two young brothers battling Lesch-Nyhan Syndrome.',
+    type: 'website',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'About the Family | Save Subhajit',
+    description: 'Learn the heartbreaking story of Subhajit and Sudarshan, two young brothers battling Lesch-Nyhan Syndrome.',
+  }
 };
 
 export default function AboutFamilyPage() {

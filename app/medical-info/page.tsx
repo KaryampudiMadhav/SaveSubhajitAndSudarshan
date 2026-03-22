@@ -6,6 +6,16 @@ export const metadata: Metadata = {
   title: 'Medical Documents & Proof | Save Subhajit & Sudarshan',
   description: 'View the official medical documents, doctor appeal videos, and hospital records proving the authenticity of Subhajit and Sudarshan\'s condition.',
   keywords: 'Medical Proof, Doctor Video, Lesch-Nyhan Syndrome Diagnosis, Hospital Records, Transparent Donation',
+  openGraph: {
+    title: 'Medical Documents & Proof | Save Subhajit & Sudarshan',
+    description: 'View the official medical documents, doctor appeal videos, and hospital records proving the authenticity of Subhajit and Sudarshan\'s condition.',
+    type: 'website',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Medical Proof | Save Subhajit',
+    description: 'View the official medical documents proving the authenticity of Subhajit and Sudarshan\'s condition.',
+  }
 };
 
 export default function MedicalInfoPage() {
