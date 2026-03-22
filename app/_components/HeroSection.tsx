@@ -36,23 +36,19 @@ export default function HeroSection({ mainImageSrc, secondaryImageSrc }: HeroSec
       <div className="flex-1 flex flex-col gap-6 p-6 md:p-12 justify-center">
         {mainImageSrc && (
           <div className="relative w-full aspect-[4/3] max-h-[400px] rounded-3xl overflow-hidden shadow-2xl border-4 border-white bg-gray-100">
-            <Image 
+            <img 
               src={mainImageSrc} 
               alt="Hero Image 1" 
-              fill 
-              className="object-cover"
-              priority
+              className="absolute inset-0 w-full h-full object-cover"
             />
           </div>
         )}
         {secondaryImageSrc && (
           <div className="relative w-full aspect-[4/3] max-h-[400px] rounded-3xl overflow-hidden shadow-2xl border-4 border-white md:ml-12 bg-gray-100">
-            <Image 
+            <img 
               src={secondaryImageSrc} 
               alt="Hero Image 2" 
-              fill 
-              className="object-cover"
-              priority
+              className="absolute inset-0 w-full h-full object-cover"
             />
           </div>
         )}
